@@ -42,20 +42,19 @@
 <!--NavBar Section-->
 <section class="navBar bg-bgNavbar">
     <!--copied from daisy-->
-    <div class="navbar h-12 w-10/12 mx-auto">
-        <div class="navbar-start">
-          <div class=""><button class="btn bg-bgButton text-xl hover:bg-bgButton">Home</button></div>
+    <div class="navbar py-5 w-10/12 mx-auto flex justify-between">
+        <div class="">
+          <div class=""><button class="btn bg-bgButton text-xl hover:bg-bgButton" id="btn-home">Home</button></div>
         </div>
-        <div class="navbar-center gap-2">
-         <img class="h-full
-         " src="./assets/logo.png" alt="">
-         <a class="text-xl font-semibold href="">Donate Bangladesh</a>
-        </div>
-        <div class="navbar-end gap-1">
-            <img src="./assets/coin.png" alt="" srcset="">
-            <p class="text-xl">5000</p>
-            <p class="text-xl">BDT</p>
-        </div>
+        <div class="gap-2">
+            <img class="h-full" src="./assets/logo.png" alt="">
+            <a class="text-3xl text-gray-600 font-bold hidden md:block" href="">Donate Bangladesh</a>
+           </div>
+           <div class="flex gap-2 p-2 rounded-lg bg-bgNavbar w-36 border-2">
+               <img src="./assets/coin.png" alt="" srcset="">
+               <p class="text-xl">5000</p>
+               <p class="text-xl">BDT</p>
+           </div>
       </div>
     
       <!--daisy ends-->
@@ -108,6 +107,8 @@
       </div>
   </div>
     </main>
+
+    <script src="./JS/blog.js"></script>
 </body>
 
 </html>

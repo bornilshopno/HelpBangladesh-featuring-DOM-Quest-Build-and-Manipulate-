@@ -46,11 +46,11 @@
     <!--copied from daisy-->
     <div class="navbar py-5 w-10/12 mx-auto flex justify-between">
         <div class="">
-          <div class="dropdown"><button class="btn bg-bgButton text-xl hover:bg-bgButton">Blog</button></div>
+          <div class="dropdown"><button class="btn bg-bgButton text-xl hover:bg-bgButton" id="btn-blog">Blog</button></div>
         </div>
         <div class="gap-2">
          <img class="h-full" src="./assets/logo.png" alt="">
-         <a class="text-3xl font-bold hidden md:block" href="">Donate Bangladesh</a>
+         <a class="text-3xl text-gray-600 font-bold hidden md:block" href="">Donate Bangladesh</a>
         </div>
         <div class="flex gap-2 p-2 rounded-lg bg-bgNavbar w-36 border-2">
             <img src="./assets/coin.png" alt="" srcset="">
@@ -65,14 +65,14 @@
         <!--Header Menu Button Section-->
 
         <section class="flex justify-center gap-4 py-4">
-            <button class="btn bg-white hover:bg-white focus:bg-bgButton">Donation</button>
-            <button class="btn bg-white hover:bg-white focus:bg-bgButton">History</button>
+            <button class="btn bg-white hover:bg-white focus:bg-bgButton" id="btn-show-donation-cards">Donation</button>
+            <button class="btn bg-white hover:bg-white focus:bg-bgButton" id="btn-history">History</button>
         </section>
     </header>
 
     <!--Main Section-->
     <main class="w-10/12 mx-auto">
-<div class="grid grid-cols-1 gap-5">
+<div class="grid grid-cols-1 gap-5" id="donation-cards">
 <!--Daisy UI starts-->
 <!--Card1-->
 <div class="card card-side shadow-sm flex p-5 border-b-2 border flex-col md:flex-row">
@@ -144,9 +144,15 @@
   </div>
 
 </div>
-    </main>
+<!--History Button Function-->
+ <div class="history hidden py-10 w-10/12 mx-auto" id="history-detail">
+    <p class="border-2 bg-bgButton"> Date & Time: <span id="datetime"></span></p>
+<p class="border-2 "> no donations done yet!</p>
 
+ </div>   
+</main>
 
+<script src="./JS/app.js"></script>
 </body>
 
 </html>
