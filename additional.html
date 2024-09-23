@@ -1,0 +1,36 @@
+// <uniquifier>: Use a unique and descriptive class name
+
+    .lexend-<uniquifier> {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+    Green===> RGB(180/244/97)
+
+    /** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                    brightGreen: '#ABEF5F'
+                },
+                fontfamily: {
+                    manrope: 'Manrope , san-serif',
+                }
+            }
+        }
+    }
+</script>
