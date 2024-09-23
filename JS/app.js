@@ -18,7 +18,7 @@ document.getElementById('btn-show-donation-cards')
 //for modal portion
 document.getElementById('btn-modal-closing').addEventListener('click',function(){
     document.getElementById('modal').classList.add('hidden');
-})
+});
 //for card 1: noakhali section
 document.getElementById('btn-noakhaliDonation').addEventListener('click', function() {
     cardWiseFunction('noakhaliAmount', 'noakhali-donation', 'noakhaliTitle');

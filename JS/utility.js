@@ -23,10 +23,10 @@ function cardWiseFunction(sectionTotalAmountId, donationInputId, sectionTitleId)
 
             let newMainBalance = mainBalance - noakhaliDonation;
             document.getElementById('main-balance').innerText = newMainBalance;  // Update main balance
-            document.getElementById('amountInBlog').innerText =newMainBalance; //Update main balance in blog page
+   
 
             document.getElementById('modal').classList.remove('hidden');  // Show modal
-
+          
             const currentDateTime = new Date();
             const noakhali = document.getElementById(sectionTitleId).innerText;  // Get section title
             const p = document.createElement('p');
