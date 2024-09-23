@@ -54,7 +54,7 @@
         </div>
         <div class="flex gap-2 p-2 rounded-lg bg-bgNavbar w-36 border-2">
             <img src="./assets/coin.png" alt="" srcset="">
-            <p class="text-xl">5000</p>
+            <p class="text-xl" id="main-balance">5000</p>
             <p class="text-xl">BDT</p>
         </div>
       </div>
@@ -84,15 +84,15 @@
     <div class="card-body w-full md:w-1/2 px-0 md:px-5 flex flex-col justify-between">
         <div class="flex gap-2 p-2 rounded-lg bg-bgNavbar w-36 border-2">
             <img src="./assets/coin.png" alt="" srcset="">
-            <p class="text-xl">5000</p>
+            <p class="text-xl" id="noakhaliAmount">5000</p>
             <p class="text-xl">BDT</p>
         </div>
-      <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+      <h2 class="card-title" id="noakhaliTitle">Donate for Flood at Noakhali, Bangladesh</h2>
       <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
 
-      <input class= "border-2 rounded-md p-2" type="text" name="" id="" placeholder="Write Donation Amount">
+      <input class= "border-2 rounded-md p-2" type="text" name="" id="noakhali-donation" placeholder="Write Donation Amount">
 
-        <button class="btn bg-bgButton text-xl hover:bg-bgButton">Donate Now</button>
+        <button class="btn bg-bgButton text-xl hover:bg-bgButton" id="btn-noakhaliDonation">Donate Now</button>
       
     </div>
   </div>
@@ -147,12 +147,13 @@
 <!--History Button Function-->
  <div class="history hidden py-10 w-10/12 mx-auto" id="history-detail">
     <p class="border-2 bg-bgButton"> Date & Time: <span id="datetime"></span></p>
-<p class="border-2 "> no donations done yet!</p>
+<p class="border-2" id="no-donation"> no donations done yet!</p>
 
  </div>   
 </main>
-
+<script src="./JS/utility.js"></script>
 <script src="./JS/app.js"></script>
+
 </body>
 
 </html>
