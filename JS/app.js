@@ -1,45 +1,33 @@
 document.getElementById('btn-blog').addEventListener('click', function () {
     window.location.href = "./blog.html"
 })
+//when history button active
 document.getElementById('btn-history')
     .addEventListener('click', function () {
-        // Get current date and time
-        var now = new Date();
-        var datetime = now.toLocaleString();
-
-        // Insert date and time into HTML
-        document.getElementById("datetime").innerHTML = datetime;
-
+        const currentDateTime = new Date()
+        document.getElementById("datetime").innerHTML = currentDateTime;
         document.getElementById('history-detail').classList.remove('hidden');
         document.getElementById('donation-cards').classList.add('hidden');
     })
-
+//when donation button active
 document.getElementById('btn-show-donation-cards')
     .addEventListener('click', function () {
         document.getElementById('donation-cards').classList.remove('hidden');
         document.getElementById('history-detail').classList.add('hidden');
     })
-
-
-
-document.getElementById('btn-noakhaliDonation').addEventListener('click', function () {
-    const noakhaliAccount= getValueByTextID('noakhaliAmount')
-    const noakhaliDonation=getValueByInputID('noakhali-donation')
-    const mainBalance=getValueByTextID('main-balance')
-    if (noakhaliDonation<mainBalance){
-        let updatednoakhaliAmount = noakhaliAccount+ noakhaliDonation;
-        document.getElementById('noakhaliAmount').innerText = updatednoakhaliAmount;
-        let newMainBalance =  mainBalance- noakhaliDonation;
-        document.getElementById('main-balance').innerText = newMainBalance;
-        
-        const currentDateTime = new Date()
-        const noakhali=document.getElementById('noakhaliTitle').innerText
-        const p=document.createElement('p')
-        p.innerText=`Amount ${noakhaliDonation} donated to the campaign "${noakhali}" at ${currentDateTime}`
-        document.getElementById('history-detail').appendChild(p);
-        document.getElementById('no-donation').textContent='';    
-    }
-        else{
-            alert('you do not have sufficinet balance to donate this amount!')
-        }
+//for modal portion
+document.getElementById('btn-modal-closing').addEventListener('click',function(){
+    document.getElementById('modal').classList.add('hidden');
 })
+//for card 1: noakhali section
+document.getElementById('btn-noakhaliDonation').addEventListener('click', function() {
+    cardWiseFunction('noakhaliAmount', 'noakhali-donation', 'noakhaliTitle');
+});
+//for card 2: feni section
+document.getElementById('btn-feni-donation').addEventListener('click', function() {
+    cardWiseFunction('feniAmount', 'feni-donation', 'feniTitle');
+});
+//for card 3: quota reform section
+document.getElementById('btn-quotaDonation').addEventListener('click', function() {
+    cardWiseFunction('totalAmountForQuotaReform', 'quota-reform-donation', 'qoutaReformTitle');
+});
