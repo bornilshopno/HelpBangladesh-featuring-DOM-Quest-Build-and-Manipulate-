@@ -31,6 +31,7 @@ function cardWiseFunction(sectionTotalAmountId, donationInputId, sectionTitleId)
             const noakhali = document.getElementById(sectionTitleId).innerText;  // Get section title
             const p = document.createElement('p');
             p.innerText = `Amount ${noakhaliDonation} donated to the campaign "${noakhali}" at ${currentDateTime}`;
+            p.style.border='2px solid gray'
             document.getElementById('history-detail').appendChild(p);  // Add to history
 
             document.getElementById('no-donation').textContent = '';  // Clear "no donation" message
